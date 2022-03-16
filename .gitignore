@@ -1,2 +1,5 @@
 writable/
 public/
+system/
+tests/
+vendor/
