@@ -1,0 +1,310 @@
+<!doctype html>
+<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!-- <title>--><!--</title>-->
+<style>
+@font-face { /* Inter Bold */
+font-family:"InterBold";
+font-weight:700;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/interbold/font.eot");
+src:url("//webfonts.zohowebstatic.com/interbold/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interbold/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interbold/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interbold/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interbold/font.svg#Inter-Bold") format("svg");
+}
+.proximab{
+font-family: InterBold;
+}
+@-webkit-keyframes loading-breathe {
+from {
+opacity:.2;
+filter:alpha(opacity=20)
+}
+to {
+opacity:1;
+filter:alpha(opacity=100)
+}
+}
+@keyframes loading-breathe {
+from {
+opacity:.2;
+filter:alpha(opacity=20)
+}
+to {
+opacity:1;
+filter:alpha(opacity=100)
+}
+}
+#mainloadingDiv {
+background: #1A202B;
+opacity: 1;
+filter: alpha(opacity=100);
+-webkit-transition: opacity 500ms ease;
+transition: opacity 500ms ease
+}
+#mainloadingDiv.out{
+opacity: 0;
+}
+#mainloadingDiv .mainloadingtext {
+-webkit-animation-name: loading-breathe;
+animation-name: loading-breathe;
+-webkit-animation-duration: 1800ms;
+animation-duration: 1800ms;
+-webkit-animation-delay: 200ms;
+animation-delay: 200ms;
+-webkit-animation-timing-function: cubic-bezier(.73, .005, .42, 1.005);
+animation-timing-function: cubic-bezier(.73, .005, .42, 1.005);
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+animation-direction: alternate;
+}
+</style>
+<div style="top:0;left:0;width:100%;height:100%;position:fixed;background-color:#1A202B; z-index:1000;" id="mainloadingDiv"><div class="proximab mainloadingtext" style="font-size: 42px; color:#fff; text-align:center; height:100%; top: 40%; position: relative; text-transform:uppercase;">Zoho Recruit</div></div><link rel="SHORTCUT ICON" href='https://static.zohocdn.com/recruit/images/favicon.6d2702f74409e47352e8a350ab6d5c47.ico+"?v=2"' /><!--[if !(IE)|(gt IE 8)]><!-->
+<link rel="stylesheet" href="https://static.zohocdn.com/recruit/css/opensans.d65daf6dab1beba6b06212c37fa56de1.css" type="text/css"><link rel="stylesheet" href="https://static.zohocdn.com/recruit/css/opensanssemibold.5595a72c53d2a2402766f1349be5a9c6.css" type="text/css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"><!--<![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="https://static.zohocdn.com/recruit/css/ie8-opensans.056ec46c9e9494352b45765c17907b6d.css" /><link rel="stylesheet" type="text/css" href="https://static.zohocdn.com/recruit/css/ie8-calendar.16c15718207d23a91b2551100ede0da4.css" /><![endif]--><style type="text/css"></style>
+<link href="https://static.zohocdn.com/recruit/dist/zohocrm_lyte.885c6877ec27f1303ca15884785358ca.css" rel="stylesheet" type="text/css"><link href="https://static.zohocdn.com/recruit/css/crmcontemporary.75a51fda7d6659878ccbedf99736c78b.css" rel="stylesheet" type="text/css"><link href="https://static.zohocdn.com/recruit/css/crmsecondary.2bb12469e95689a4ec7280f645b4ed36.css" rel="stylesheet" type="text/css"><link href="https://static.zohocdn.com/recruit/css/kanbanview.5d30e58a51c809626b1edc047ccb3d50.css" rel="stylesheet" type="text/css"><link href="https://css.zohostatic.com/storehandler/v9/css/zswidget.min.css" rel="stylesheet" type="text/css"><link href="https://static.zohocdn.com/recruit/css/workdrive-component-custom-style.39d3222b8b912199265c41784cdeca28.css" rel="stylesheet" type="text/css"><link href="//css.zohocdn.com/ichat/css/Jan_28_2022_2_wmsbar.css" rel="stylesheet" type="text/css"><script>uiTrans ='';
+uiTrans ='<link href="https://static.zohocdn.com/recruit/css/ui-transition.e39e71721492acc90ffcf5611e69802f.css" rel="stylesheet" type="text/css" >';</script><link href="https://webfonts.zoho.com/css?family=Inter:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"><style type="text/css">
+@font-face { /* Inter Thin */
+font-family:"InterThin";
+font-weight:100;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/interthin/font.eot");
+src:url("//webfonts.zohowebstatic.com/interthin/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interthin/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interthin/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interthin/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interthin/font.svg#Inter-Thin") format("svg");
+}
+@font-face { /* Inter Light */
+font-family:"InterLight";
+font-weight:300;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/interlight/font.eot");
+src:url("//webfonts.zohowebstatic.com/interlight/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interlight/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interlight/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interlight/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interlight/font.svg#Inter-Light") format("svg");
+}
+@font-face { /* Inter Regular */
+font-family:"InterRegular";
+font-weight:400;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/interregular/font.eot");
+src:url("//webfonts.zohowebstatic.com/interregular/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interregular/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interregular/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interregular/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interregular/font.svg#Inter-Regular") format("svg");
+}
+@font-face { /* Inter Medium */
+font-family:"InterMedium";
+font-weight:500;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/intermedium/font.eot");
+src:url("//webfonts.zohowebstatic.com/intermedium/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/intermedium/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/intermedium/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/intermedium/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/intermedium/font.svg#Inter-Medium") format("svg");
+}
+@font-face { /* Inter SemiBold */
+font-family:"InterSemibold";
+font-weight:600;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/intersemibold/font.eot");
+src:url("//webfonts.zohowebstatic.com/intersemibold/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/intersemibold/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/intersemibold/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/intersemibold/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/intersemibold/font.svg#Inter-SemiBold") format("svg");
+}
+@font-face { /* Inter Bold */
+font-family:"InterBold";
+font-weight:700;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/interbold/font.eot");
+src:url("//webfonts.zohowebstatic.com/interbold/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interbold/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interbold/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interbold/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interbold/font.svg#Inter-Bold") format("svg");
+}
+@font-face { /* Inter Heavy */
+font-family:"InterHeavy";
+font-weight:800;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/interextrabold/font.eot");
+src:url("//webfonts.zohowebstatic.com/interextrabold/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interextrabold/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interextrabold/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interextrabold/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interextrabold/font.svg#Inter-ExtraBold") format("svg");
+}
+@font-face { /* Inter Black */
+font-family:"InterBlack";
+font-weight:900;
+font-style:normal;
+src:url("//webfonts.zohowebstatic.com/interblack/font.eot");
+src:url("//webfonts.zohowebstatic.com/interblack/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interblack/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interblack/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interblack/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interblack/font.svg#Inter-Black") format("svg");
+}
+@font-face { /* Inter Thin Italic */
+font-family:"InterThinItalic";
+font-weight:100;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/interthinitalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/interthinitalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interthinitalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interthinitalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interthinitalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interthinitalic/font.svg#Inter-ThinItalic") format("svg");
+}
+@font-face { /* Inter LightItalic */
+font-family:"InterLightItalic";
+font-weight:300;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/interlightitalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/interlightitalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interlightitalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interlightitalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interlightitalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interlightitalic/font.svg#Inter-LightItalic") format("svg");
+}
+@font-face { /* Inter RegularItalic */
+font-family:"InterRegularItalic";
+font-weight:400;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/interitalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/interitalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interitalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interitalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interitalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interitalic/font.svg#Inter-Italic") format("svg");
+}
+@font-face { /* Inter Medium Italic */
+font-family:"InterMediumItalic";
+font-weight:500;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/intermediumitalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/intermediumitalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/intermediumitalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/intermediumitalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/intermediumitalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/intermediumitalic/font.svg#Inter-MediumItalic") format("svg");
+}
+@font-face { /* Inter SemiBold Italic */
+font-family:"InterSemiboldItalic";
+font-weight:600;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/intersemibolditalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/intersemibolditalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/intersemibolditalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/intersemibolditalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/intersemibolditalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/intersemibolditalic/font.svg#Inter-SemiBoldItalic") format("svg");
+}
+@font-face { /* Inter Bold Italic */
+font-family:"InterBoldItalic";
+font-weight:700;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/interbolditalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/interbolditalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interbolditalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interbolditalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interbolditalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interbolditalic/font.svg#Inter-BoldItalic") format("svg");
+}
+@font-face { /* Inter Heavy Italic */
+font-family:"InterHeavyItalic";
+font-weight:800;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/interextrabolditalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/interextrabolditalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interextrabolditalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interextrabolditalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interextrabolditalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interextrabolditalic/font.svg#Inter-ExtraBoldItalic") format("svg");
+}
+@font-face { /* Inter Black Italic */
+font-family:"InterBlackItalic";
+font-weight:900;
+font-style:italic;
+src:url("//webfonts.zohowebstatic.com/interblackitalic/font.eot");
+src:url("//webfonts.zohowebstatic.com/interblackitalic/font.eot?#iefix") format("eot"),
+url("//webfonts.zohowebstatic.com/interblackitalic/font.woff2") format("woff2"),
+url("//webfonts.zohowebstatic.com/interblackitalic/font.woff") format("woff"),
+url("//webfonts.zohowebstatic.com/interblackitalic/font.ttf") format("truetype"),
+url("//webfonts.zohowebstatic.com/interblackitalic/font.svg#Inter-BlackItalic") format("svg");
+}
+.InterThin{
+font-family: InterThin;
+}
+.InterLight{
+font-family: InterLight;
+}
+.InterRegular{
+font-family: InterRegular;
+}
+.InterMedium{
+font-family: InterMedium;
+}
+.InterSemibold{
+font-family: InterSemibold;
+}
+.InterBold, .proximab{
+font-family: InterBold;
+}
+.InterHeavy{
+font-family: InterHeavy;
+}
+.InterBlack{
+font-family: InterBlack;
+}
+.InterThinItalic{
+font-family: InterLightItalic;
+}
+.InterLightItalic{
+font-family: InterLightItalic;
+}
+.InterRegularItalic{
+font-family: InterRegularItalic;
+}
+.InterMediumItalic{
+font-family: InterMediumItalic;
+}
+.InterSemiboldItalic{
+font-family: InterSemiboldItalic;
+}
+.InterBoldItalic{
+font-family: InterBoldItalic;
+}
+.InterHeavyItalic{
+font-family: InterHeavyItalic;
+}
+.InterBlackItalic{
+font-family: InterBlackItalic;
+}
+</style>
+<script type="text/javascript">var loadHistory = false;
+var jsonDepValues;
+var jsonSelectValues;
+function defineConstant(const_name,const_value)
+{
+if(const_value == 'null' || !const_value)
+{
+const_value = undefined;
+}
+Object.defineProperty(window, const_name, {
+value: const_value,
+enumerable: true,
+writable: false,
+configurable: false
+});
+}
+
+
