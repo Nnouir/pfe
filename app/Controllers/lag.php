@@ -38,7 +38,7 @@ class lag extends BaseController
     $users = $userModel->findAll();
         
   
-        $data = ['lang' => $users,'ajout'=>$erros];
+        $data = ['lang' => $users,'ajout'=>$erros ?? null];
         
     return view('la',$data);
         

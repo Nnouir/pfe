@@ -78,6 +78,12 @@
                 </a>
             </li>
         </ul>
+        <li>
+                <a href="<?php echo base_url('rh/candidat')?>" >
+                    <i class="uil-home-alt"></i><span class="badge rounded-pill bg-primary float-end">01</span>
+                    <span>Dashboard candidate</span>
+                </a>
+            </li>
     </div>
     <!-- Sidebar -->
 </div>

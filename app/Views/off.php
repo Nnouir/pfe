@@ -69,7 +69,7 @@
                                  <tbody>
                                     <?php if($offre): ?>
                                     <?php foreach($offre as $users ): ?>
-                                    <tr id="<?php echo $users['id']; ?>"> 
+                                    <tr id="<?php echo $users['id_offre']; ?>"> 
                                         <td> <?php echo $users['id_offre']; ?></td>
                                         <td> <?php echo $users['titre']; ?></td>
                                         <td> <?php echo $users['duree']; ?></td>

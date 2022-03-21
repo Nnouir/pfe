@@ -49,9 +49,15 @@ $routes->add('rh/diplome/(:any)', 'diplome::delete/$1');
 $routes->add('rh/diplomeget/(:any)', 'diplome::fer/$1');
 $routes->add('rh/diplomeup', 'diplome::update');
 $routes->add('rh/ajout', 'envoye::index');
+<<<<<<< Updated upstream
 $routes->add('rh/offreup/(:any)', 'offre::update/$1');
 $routes->add('rh/update', 'update::index');
 /*$routes->add('rh/offrup', 'offre::upd');
+=======
+$routes->add('rh/candidat', 'post::index');
+$routes->add('rh/rh/formulaire', 'formulaire::index');
+/*
+>>>>>>> Stashed changes
 /*
  * --------------------------------------------------------------------
  * Additional Routing

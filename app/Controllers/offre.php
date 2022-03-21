@@ -19,7 +19,7 @@ class offre extends BaseController
      $userModel = new \App\Models\OffreModel(); 
      $users = $userModel->select('offre.*,users.name as namertech,u2.name as namerpsy')->join('users', 'offre.id_resptech = users.id')->join('users as u2', 'offre.id_resppsych= u2.id')
            ->find();
-     $data = ['offre' => $users,'ajout'=>$erros];
+     $data = ['offre' => $users,'ajout'=>$erros ?? null];
       
          
           return view('off',$data);}
