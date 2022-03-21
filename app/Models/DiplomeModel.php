@@ -12,7 +12,7 @@ class DiplomeModel extends Model
     protected $returnType     = 'array';
    // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['id_offre','titre'];
+    protected $allowedFields = ['titre'];
    
    
 }

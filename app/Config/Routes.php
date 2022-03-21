@@ -43,11 +43,15 @@ $routes->add('rh/langue', 'lag::index');
 $routes->add('rh/offre', 'offre::index');
 $routes->add('rh/off', 'offre::add');
 $routes->add('rh/off', 'offre::niveau');
+
 $routes->add('rh/diplome', 'diplome::index');
 $routes->add('rh/diplome/(:any)', 'diplome::delete/$1');
 $routes->add('rh/diplomeget/(:any)', 'diplome::fer/$1');
 $routes->add('rh/diplomeup', 'diplome::update');
 $routes->add('rh/ajout', 'envoye::index');
+$routes->add('rh/offreup/(:any)', 'offre::update/$1');
+$routes->add('rh/update', 'update::index');
+/*$routes->add('rh/offrup', 'offre::upd');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
