@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                    <h4 class="mb-0">offre d'emploi</h4>
+                    <h4 class="mb-0">offres d'emploi</h4>
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?php echo base_url('rh/offre')?>">offre d'emploi</a></li>
@@ -68,7 +68,8 @@
         <!-- end page title -->
 
 
-<form method="get" action="<?php echo base_url('rh/ajout')?>" >
+<form action="<?php echo base_url("rh/update")?>" method="post">
+                     <div>  <input type="hidden" id="id" name="id_offre" value='<?php echo $offre['id_offre']; ?>' ></div>
                 <div class="row">         
                             <div class="col-12">
                                 <div class="card">
@@ -76,13 +77,14 @@
                                         <div class="mb-3 row">
                                             <label for="example-search-input" class="col-md-2 col-form-label">title</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="title"  id="titre_id_id"name="titre">
+                                                <input class="form-control" type="title"  id="titre_id"name="titre" value='<?php echo $offre['titre']; ?>' >
+                                                <input type="hidden" id="titre_id_id" name="tire" > 
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
                                             <label for="example-search-input" class="col-md-2 col-form-label">domaine</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="title"  id="titre_id_id2"name="domaine">
+                                                <input class="form-control" type="title"  id="titre_id_id2"name="domaine"value='<?php echo $offre['domaine']; ?>'>
                                             </div>
                                         </div>
                                     <div>
@@ -93,7 +95,7 @@
                                                 <?php if($listrpsy): ?>
                                                        <?php foreach( $listrpsy as $user):?>
                                                        
-                                                       <option value="<?php echo $user['id']?>"> <?php echo $user['name'];?></option>
+                                                       <option value="<?php echo $user['id']?>"<?php if($users['id']==$offre['id_resppsych']) echo 'selected'?>> <?php echo $user['name'];?></option>
                                                        
                                                      <?php endforeach; ?>
                                                      <?php endif; ?>
@@ -109,9 +111,9 @@
                                                     
                                                   
                                                     <?php if($listrtech): ?>
-                                                       <?php foreach( $listrtech as $user):?>
+                                                       <?php foreach( $listrtech as $users):?>
                                                        
-                                                       <option value="<?php echo $user['id']?>"> <?php echo $user['name'];?></option>
+                                                       <option value="<?php echo $users['id']?>" <?php if($users['id']==$offre['id_resptech']) echo 'selected'?>> <?php echo $users['name'];?></option>
                                                        
                                                      <?php endforeach; ?>
                                                      <?php endif; ?>
@@ -125,7 +127,7 @@
                                         <div class="mb-3 row">
                                             <label for="example-date-input" class="col-md-2 col-form-label">Date</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="date" value="2019-08-19"  id="titre_id_id3" name="duree">
+                                                <input class="form-control" type="date" id="titre_id_id3" name="duree"value='<?php echo $offre['dateD']; ?>'>
                                             </div>
                                         </div>
                                                       
@@ -143,9 +145,9 @@
                                     <div class="row">
                                         <div class="col-12">
                                                <div class="card-body">
-                                                   <form method="post">
-                                                             <textarea id="elm1" name="description"></textarea>
-                                                   </form>
+                                                   <div>
+                                                             <textarea id="elm1" name="description" ><?php echo $offre['description']; ?></textarea>
+                                                       </div>
                                             </div>
                                         </div>
                                     </div> <!-- end col -->
@@ -168,7 +170,7 @@
                                                         <tr id="<?php echo $user['id']; ?>"> 
                                                 <td><?php echo $user['id']; ?></td>
                                                 <td>  <?php echo $user['titre'];?></td>
-                                                <td>   <input class="form-control" type="title"  id="titre_id_id" name="pointdiplome[<?php echo $user['id']; ?>]"> </td>  
+                                                <td>   <input class="form-control" type="title"  id="titre_id_id" name="pointdiplome[<?php echo $user['id']; ?>]" value='<?php echo $niv[$user['id']]; ?>'> </td>  
                                                      <?php endforeach; ?>
                                                      <?php endif; ?></label><br> 
                                         </tbody>
@@ -192,7 +194,7 @@
                                                         <tr id="<?php echo $user['id']; ?>"> 
                                                 <td><?php echo $user['id']; ?></td>
                                                 <td> <option  value="<?php echo $user['id']?>"> <?php echo $user['titre'];?></option></td>
-                                                <td>   <input class="form-control" type="title"  id="titre_id_id"name="pointslang[<?php echo $user['id']; ?>]"> </td>  
+                                                <td>   <input class="form-control" type="title"  id="titre_id_id"name="pointslang[<?php echo $user['id']; ?>]"value='<?php echo $lang[$user['id']]; ?>'> </td>  
                                                      <?php endforeach; ?>
                                                      <?php endif; ?></label><br> 
                                          </tbody>
@@ -207,28 +209,29 @@
                                       <h4 class="card-title mb-4">competence</h4>
                                         <div class="repeater" enctype="multipart/form-data">
                                             <div data-repeater-list="group-a">
+                                            <?php foreach ($compe as $id_competence => $pcom):?>  
                                                 <div data-repeater-item class="row">
                                                     <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="name">competence</label>
-                                                        <input type="text" id="name" name="competence_titre" class="form-control"/>
+                                                        <input type="text" id="name" name="competence_titre" class="form-control"value='<?php echo $pcom['titre']; ?>'/>
                                                     </div>
                                                     <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="name">Max</label>
-                                                        <input type="text" id="name" name="competence-max" class="form-control"/>
+                                                        <input type="text" id="name" name="competence-max" class="form-control"value='<?php echo $pcom['max']; ?>'/>
                                                     </div>
                                                     <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="name">Min</label>
-                                                        <input type="text" id="name" name="competence-min" class="form-control"/>
+                                                        <input type="text" id="name" name="competence-min" class="form-control"value='<?php echo $pcom['min']; ?>'/>
                                                     </div>
                                                     <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="subject">points</label>
-                                                        <input type="text" id="subject" name='point' class="form-control"/>
+                                                        <input type="text" id="subject" name='point' class="form-control"value='<?php echo $pcom['points']; ?>'/>
                                                     </div>
                                                     <div class="col-lg-2 align-self-center d-grid">
                                                         <input data-repeater-delete type="button" class="btn btn-primary btn-block" value="Delete"/>
                                                     </div>
                                                 </div>
-                                                
+                                                <?php endforeach; ?>
                                             </div>
                                             <input data-repeater-create type="button" class="btn btn-success mt-3 mt-lg-0" value="Add"/>
                                                        </div>
@@ -250,8 +253,8 @@
                                                     </div>
                                                         <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="subject">points</label>
-                                                        <input type="text" id="subject"  name="m" class="form-control"/>
-                                                        <input type="text" id="subject" name="f" class="form-control" />
+                                                        <input type="text" id="subject"  name="m" class="form-control"value='<?php echo $sexf['points']; ?>'/>
+                                                        <input type="text" id="subject" name="f" class="form-control"value='<?php echo $sexm['points']; ?>' />
                                                         
                                                 </div>
                                             </div>
@@ -266,24 +269,26 @@
                                         <h4 class="card-title mb-4">Age</h4>
                                         <div class="repeater" enctype="multipart/form-data">
                                             <div data-repeater-list="group-a">
+                                            <?php foreach ($age as $id_age => $page):?> 
                                                 <div data-repeater-item class="row">
                                                     <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="name">Min</label>
-                                                        <input type="text" id="name" name="age-min" class="form-control"/>
+                                                        <input type="text" id="name" name="age-min" class="form-control"value='<?php echo $page['min']; ?>'/>
                                                     </div>
         
                                                     <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="name">Max</label>
-                                                        <input type="text" id="name" name="age-max" class="form-control"/>
+                                                        <input type="text" id="name" name="age-max" class="form-control"value='<?php echo $page['max']; ?>'/>
                                                     </div>
                                                     <div  class="mb-3 col-lg-2">
                                                         <label class="form-label" for="subject">points</label>
-                                                        <input type="text" id="subject"name="point" class="form-control"/>
+                                                        <input type="text" id="subject"name="point" class="form-control"value='<?php echo $page['points']; ?>'/>
                                                     </div>
                                                     <div class="col-lg-2 align-self-center d-grid">
                                                         <input data-repeater-delete type="button" class="btn btn-primary btn-block" value="Delete"/>
                                                     </div>
                                                 </div>
+                                                <?php endforeach; ?>
                                             </div>
                                             <input data-repeater-create type="button" class="btn btn-success mt-3 mt-lg-0" value="Add"/>
                                                        </div>
@@ -292,7 +297,7 @@
                         </div>
                         <!-- end row -->
                         
- <br/><input type="submit" />
+                        <button type="submit" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/offre')?>">update</a></button> </td>
      
 </form>
 </div> 
@@ -365,5 +370,6 @@
 <script src="<?php echo base_url('assets/js/pages/form-repeater.int.js')?>"></script>
 
 <script src="<?php echo base_url('assets/js/app.js')?>"></script>
+
      </body>
 </html>

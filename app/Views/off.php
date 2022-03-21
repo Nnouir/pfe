@@ -75,6 +75,7 @@
                                         <td> <?php echo $users['duree']; ?></td>
                                         <td> <?php echo $users['namertech']; ?> </td>
                                         <td> <?php echo $users['namerpsy']; ?> </td>
+                                        <td> <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/offreup/'.$users['id_offre'])?>">update</a></button> </td>
                                     </tr>
                                    <?php endforeach; ?>
                                    <?php endif; ?>

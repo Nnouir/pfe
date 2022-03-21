@@ -52,7 +52,7 @@
                                     <form action="index.html">
         
                                         <div class="mb-3">
-                                           <?php echo $erros?>
+                                        <?php if(isset($erros)) echo $erros?>
                                             <label class="form-label" for="useremail">Email</label>
                                             <input type="email" name="email" class="form-control" id="useremail" placeholder="Enter email">        
                                         </div>

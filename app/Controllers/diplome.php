@@ -37,7 +37,7 @@ $erros=$this->validator;
     $users = $userModel->findAll();
         
   
-        $data = ['lang' => $users,'ajout'=>$erros];
+        $data = ['lang' => $users,'ajout'=>$erros ?? null];
         
     return view('dip',$data);
         
