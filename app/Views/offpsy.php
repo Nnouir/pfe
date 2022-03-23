@@ -217,7 +217,7 @@
                type: 'POST',
                error: function() { alert('Something is wrong'); },
                success: function(test) {
-               //document.getElementById("elm1").value = test;
+              
                tinyMCE.get('elm1').setContent(test);
                 document.getElementById("id").setAttribute("value", id); }
             });
