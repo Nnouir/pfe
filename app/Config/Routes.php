@@ -51,8 +51,16 @@ $routes->add('rh/diplomeup', 'diplome::update');
 $routes->add('rh/ajout', 'envoye::index');
 $routes->add('rh/offreup/(:any)', 'offre::update/$1');
 $routes->add('rh/update', 'update::index');
+$routes->add('rh/offre/(:any)', 'offre::delete/$1');
+$routes->get('rhtech/dachbourd', 'retchdashbord::index');
+$routes->add('rhtech/offre', 'offretech::index');
+$routes->add('rhtech/offreget/(:any)', 'offretech::fer/$1');
+$routes->get('rhpsy/dachbourd','rpsychdashbord::index');
+$routes->add('rhpsy/of', 'ofrpsy::index');
+$routes->add('rhpsy/offreget/(:any)', 'ofrpsy::fer/$1');
 $routes->add('rh/candidat', 'post::index');
 $routes->add('rh/rh/formulaire', 'formulaire::index');
+
 /*
 
 <<<<<<< Updated upstream
