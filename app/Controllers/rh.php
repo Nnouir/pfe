@@ -72,6 +72,14 @@ else{
 
                     return redirect()->to(base_url('rh/dachbourd'));
                 }
+                elseif($user['role'] == "RTECH"){
+
+                   return redirect()->to(base_url('rhtech/dachbourd'));
+                }
+                elseif($user['role'] == "RPSY"){
+
+                    return redirect()->to(base_url('rhpsy/dachbourd'));
+                }
             }
             }
         }

@@ -8,7 +8,7 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.ico')?>">
 
         <!-- DataTables -->
         <link href="<?php echo base_url('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css')?>" rel="stylesheet" type="text/css" />
@@ -300,9 +300,8 @@
 </div>
 </div>
 
-
- <script src="<?php echo base_url('assets/libs/waypoints/lib/jquery.waypoints.min.js')?>"></script>
- <script src="<?php echo base_url('assets/libs/jquery.counterup/jquery.counterup.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/waypoints/lib/jquery.waypoints.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/jquery.counterup/jquery.counterup.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/jquery/jquery.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/metismenu/metisMenu.min.js')?>"></script>
@@ -310,7 +309,6 @@
 <script src="<?php echo base_url('assets/libs/node-waves/waves.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/waypoints/lib/jquery.waypoints.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/jquery.counterup/jquery.counterup.min.js')?>"></script>
-
 <!-- Required datatable js -->
 <script src="<?php echo base_url('assets/libs/datatables.net/js/jquery.dataTables.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')?>"></script>
@@ -323,47 +321,36 @@
 <script src="<?php echo base_url('assets/libs/datatables.net-buttons/js/buttons.html5.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/datatables.net-buttons/js/buttons.print.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/datatables.net-buttons/js/buttons.colVis.min.js')?>"></script>
-
 <!-- Responsive examples -->
 <script src="<?php echo base_url('assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js')?>"></script>
 <script src="<?php echo base_url('assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')?>"></script>
-
 <!-- Datatable init js -->
 <script src="<?php echo base_url('assets/js/pages/datatables.init.js')?>"></script>
 <div class="rightbar-overlay"></div>
+<!-- JAVASCRIPT -->
+<script src="<?php echo base_url('assets/libs/jquery/jquery.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/metismenu/metisMenu.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/simplebar/simplebar.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/node-waves/waves.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/waypoints/lib/jquery.waypoints.min.js')?>"></script>
+<script src="<?php echo base_url('assets/libs/jquery.counterup/jquery.counterup.min.js')?>"></script>
+<!-- ckeditor -->
+<script src="<?php echo base_url('assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js')?>"></script>
+<!--tinymce js-->
+<script src="<?php echo base_url('assets/libs/tinymce/tinymce.min.js')?>"></script>
+ <!-- init js -->
+<script src="<?php echo base_url('assets/js/pages/form-editor.init.js')?>"></script>
+<script src="<?php echo base_url('assets/js/app.js')?>"></script>
 
-        <!-- JAVASCRIPT -->
-        <script src="<?php echo base_url('assets/libs/jquery/jquery.min.js')?>"></script>
-        <script src="<?php echo base_url('assets/libs/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
-        <script src="<?php echo base_url('assets/libs/metismenu/metisMenu.min.js')?>"></script>
-        <script src="<?php echo base_url('assets/libs/simplebar/simplebar.min.js')?>"></script>
-        <script src="<?php echo base_url('assets/libs/node-waves/waves.min.js')?>"></script>
-        <script src="<?php echo base_url('assets/libs/waypoints/lib/jquery.waypoints.min.js')?>"></script>
-        <script src="<?php echo base_url('assets/libs/jquery.counterup/jquery.counterup.min.js')?>"></script>
-
-        <!-- ckeditor -->
-        <script src="<?php echo base_url('assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js')?>"></script>
-
-        <!--tinymce js-->
-        <script src="<?php echo base_url('assets/libs/tinymce/tinymce.min.js')?>"></script>
-
-        <!-- init js -->
-        <script src="<?php echo base_url('assets/js/pages/form-editor.init.js')?>"></script>
-
-        <script src="<?php echo base_url('assets/js/app.js')?>"></script>
-
-        <script>
+<script>
         ClassicEditor
         .create( document.querySelector( '#classic-editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+        .catch( error => { console.error( error );} );
         </script>
          <!-- form repeater js -->
 <script src="<?php echo base_url('assets/libs/jquery.repeater/jquery.repeater.min.js')?>"></script>
-
 <script src="<?php echo base_url('assets/js/pages/form-repeater.int.js')?>"></script>
-
 <script src="<?php echo base_url('assets/js/app.js')?>"></script>
      </body>
 </html>
