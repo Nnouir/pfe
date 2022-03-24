@@ -79,7 +79,8 @@ public function profil()
     
 public function signout()
     {
-
+        session()->destroy();
+        return redirect()->to(site_url('/login'));
     }
          
 }//end classe
