@@ -34,6 +34,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Users::index');
 $routes->post('login/puc', 'rh::login');
+$routes->add('rh/profil', 'rh::profil');
+$routes->add('rh/envoye', 'rh::update');
+$routes->add('rh/signout', 'rh::signout');
 $routes->get('rh/dachbourd', 'rhdashboard::index');
 
 $routes->add('rh/langue/(:any)', 'lag::delete/$1');
