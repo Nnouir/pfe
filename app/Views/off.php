@@ -27,7 +27,7 @@
      <!-- Begin page -->
        <div id="layout-wrapper">
        <?php echo view('header');?>
-       <?php echo view('menutech');?>    <!-- Sidebar -->
+       <?php echo view('menu');?>    <!-- Sidebar -->
        </div>
 
  <div class="main-content">
