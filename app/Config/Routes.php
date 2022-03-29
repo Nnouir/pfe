@@ -52,7 +52,9 @@ $routes->add('rh/ajout', 'envoye::index');
 $routes->add('rh/offreup/(:any)', 'offre::update/$1');
 $routes->add('rh/update', 'update::index');
 $routes->add('rh/candidat', 'post::index');
-$routes->add('rh/rh/formulaire', 'formulaire::index');
+$routes->add('rh/formulaireget/(:any)','formulaire::index/$1');
+$routes->add('rh/formulaire', 'formulaire::index');
+$routes->add('rh/form','candidat::index');
 /*
 
 <<<<<<< Updated upstream

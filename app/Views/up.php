@@ -95,7 +95,7 @@
                                                 <?php if($listrpsy): ?>
                                                        <?php foreach( $listrpsy as $user):?>
                                                        
-                                                       <option value="<?php echo $user['id']?>"<?php if($users['id']==$offre['id_resppsych']) echo 'selected'?>> <?php echo $user['name'];?></option>
+                                                       <option value="<?php  echo $user['id']?>"<?php if($users['id']==$offre['id_resppsych']) echo 'selected'?>> <?php echo $user['name'];?></option>
                                                        
                                                      <?php endforeach; ?>
                                                      <?php endif; ?>

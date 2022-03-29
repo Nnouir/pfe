@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class formulaire extends BaseController
 {
-    public function index()
+    public function index($id)
     {
        /* $userModel = new \App\Models\CandidatModel ()
         $rj = [
@@ -19,17 +19,29 @@ class formulaire extends BaseController
       ]; 
         $idoffre = $userModel ->insert($rj);
                        var_dump( $idoffre );*/
-                       $userModel = new \App\Models\CompetenceModel(); 
-                       $users = $userModel->select('competence.*')->where('competence.id_offre ','offre.id') ->find();
-                       $data = ['offre'=> $users,'ajout'=>$erros ?? null];
+                       $userModel = new \App\Models\CompetenceModel  ();
+                       $cj= $userModel->where('id_offre',$id)->find();
+                    
+                       $data['listcomp']=$cj;
+                      
+                     
                        
-                       $userModel = new \App\Models\LagModel(); 
-                       $users = $userModel->select('langue.*')->where('langue.id_offre ','offre.id') ->find();
-                       $data = ['lag'=> $users,'ajout'=>$erros ?? null];
-                       
-                        
-                          
-                          
+                      /* $userModel = new \App\Models\LagModel(); 
+                       $users= $userModel->findAll();*/
+                       $userModel = new \App\Models\PlangueModel();
+                       $user = $userModel-> select('Plangue.*,langue.titre as namelang')->join('langue', 'Plangue.id_langue = langue.id and Plangue.id_offre='.$id)->find();
+                     
+                       $data['listlang']=$user;
+                       $userModel = new \App\Models\DiplomeModel();
+                       $users = $userModel->select('diplome.*')
+                                      ->findAll();
+                                      $data['listdip']=$users;
+                     /*  $userModel = new \App\Models\SexeModel(); 
+                       $users = $userModel->select('Sexe.*')->where('Sexe.id_offre ','offre.id') ->find();
+                       $data = ['Sexe'=> $users,'ajout'=>$erros ?? null];*/
+                            
+                             $data['id_offre']=$id; 
+                             
                           return view('formulaire',$data);
                              
      
