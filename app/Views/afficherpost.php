@@ -91,7 +91,7 @@
                                                 <h6 class="font-size-15 mb-1 fw-normal"> title:</h6>
                                                 <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> <?php echo $users['titre']; ?></p>
                         </td>
-                                                <td><a href="rh/formulaire">open post</a></td>
+                                                <td><a href="<?php echo base_url('rh/formulaireget/'.$users['id_offre'])?>">open post</a></td>
                                             </tr>
                                             <tr>
                                                 <td>

@@ -5,13 +5,13 @@ use CodeIgniter\Model;
 
 class candidatModel extends Model
 {
-    protected $table      = 'candidat';
+    protected $table      = 'detailscore';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
    // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nom','age','adresse','num_tel','linkedin','id_offre','niveau','sexe','specialite'];
+    protected $allowedFields = ['page','plangue','psexe','petude','pcompetence','id_offre','id candidat'];
 }
 ?>

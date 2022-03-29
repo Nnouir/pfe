@@ -62,19 +62,7 @@ $routes->get('rhpsy/dachbourd','rpsychdashbord::index');
 $routes->add('rhpsy/of', 'ofrpsy::index');
 $routes->add('rhpsy/offreget/(:any)', 'ofrpsy::fer/$1');
 $routes->add('rh/candidat', 'post::index');
-$routes->add('rh/rh/formulaire', 'formulaire::index');
 
-/*
-
-<<<<<<< Updated upstream
-$routes->add('rh/offreup/(:any)', 'offre::update/$1');
-$routes->add('rh/update', 'update::index');
-/*$routes->add('rh/offrup', 'offre::upd');
-=======
-$routes->add('rh/candidat', 'post::index');
-$routes->add('rh/rh/formulaire', 'formulaire::index');
-/*
->>>>>>> Stashed changes
 /*
  * --------------------------------------------------------------------
  * Additional Routing
