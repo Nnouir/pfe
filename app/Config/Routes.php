@@ -63,6 +63,23 @@ $routes->add('rhpsy/of', 'ofrpsy::index');
 $routes->add('rhpsy/offreget/(:any)', 'ofrpsy::fer/$1');
 $routes->add('rh/candidat', 'post::index');
 
+$routes->add('rh/formulaireget/(:any)','formulaire::index/$1');
+$routes->add('rh/formulaire', 'formulaire::index');
+$routes->add('rh/form','candidat::index');
+$routes->add('rh/candidat','post::index');
+$routes->add('rh/rh/formulaire', 'formulaire::index');
+
+
+
+
+
+
+/*$routes->add('rh/offrup', 'offre::upd');
+=======
+$routes->add('rh/candidat', 'post::index');
+$routes->add('rh/rh/formulaire', 'formulaire::index');
+/*
+>>>>>>> Stashed changes
 /*
  * --------------------------------------------------------------------
  * Additional Routing
