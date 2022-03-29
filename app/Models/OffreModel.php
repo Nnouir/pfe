@@ -10,8 +10,9 @@ class OffreModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-   // protected $useSoftDeletes = true;
-
+    protected $useSoftDeletes = true;
+   protected $useTimestamps = false;
+   protected $deletedField  = 'deletedate';
     protected $allowedFields = ['id_rh','id_resptech','id_resppsych','titre','description','domaine','duree','dateD'];
    
    

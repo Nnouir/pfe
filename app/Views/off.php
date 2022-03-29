@@ -76,6 +76,7 @@
                                         <td> <?php echo $users['namertech']; ?> </td>
                                         <td> <?php echo $users['namerpsy']; ?> </td>
                                         <td> <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/offreup/'.$users['id_offre'])?>">update</a></button> </td>
+                                        <td> <button type="button" class="btn btn-danger remove"> Delete</button>
                                     </tr>
                                    <?php endforeach; ?>
                                    <?php endif; ?>
@@ -115,5 +116,20 @@
 <!-- Datatable init js -->
 <script src="<?php echo base_url('assets/js/pages/datatables.init.js')?>"></script>
 <script src="<?php echo base_url('assets/js/app.js')?>"></script> 
+
+<script type="text/javascript">
+        $(".remove").click(function(){ var id = $(this).parents("tr").attr("id");
+        if(confirm('Are you sure to remove this record ?'))
+        { $.ajax({
+               url: "<?php echo base_url('/rh/offre/').'/'?>"+id,
+               type: 'POST',
+               error: function() {alert('Something is wrong'); },
+               success: function(data) { $("#"+id).remove(); 
+                alert("Record removed successfully");  }
+                   });
+        }
+        });
+</script>
+<!--delete-->
 </body>
 </html>

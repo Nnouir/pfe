@@ -34,6 +34,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Users::index');
 $routes->post('login/puc', 'rh::login');
+$routes->add('rh/profil', 'rh::profil');
+$routes->add('rh/envoye', 'rh::update');
+$routes->add('rh/signout', 'rh::signout');
 $routes->get('rh/dachbourd', 'rhdashboard::index');
 
 $routes->add('rh/langue/(:any)', 'lag::delete/$1');
@@ -51,21 +54,15 @@ $routes->add('rh/diplomeup', 'diplome::update');
 $routes->add('rh/ajout', 'envoye::index');
 $routes->add('rh/offreup/(:any)', 'offre::update/$1');
 $routes->add('rh/update', 'update::index');
+$routes->add('rh/offre/(:any)', 'offre::delete/$1');
+$routes->get('rhtech/dachbourd', 'retchdashbord::index');
+$routes->add('rhtech/offre', 'offretech::index');
+$routes->add('rhtech/offreget/(:any)', 'offretech::fer/$1');
+$routes->get('rhpsy/dachbourd','rpsychdashbord::index');
+$routes->add('rhpsy/of', 'ofrpsy::index');
+$routes->add('rhpsy/offreget/(:any)', 'ofrpsy::fer/$1');
 $routes->add('rh/candidat', 'post::index');
-$routes->add('rh/formulaireget/(:any)','formulaire::index/$1');
-$routes->add('rh/formulaire', 'formulaire::index');
-$routes->add('rh/form','candidat::index');
-/*
 
-<<<<<<< Updated upstream
-$routes->add('rh/offreup/(:any)', 'offre::update/$1');
-$routes->add('rh/update', 'update::index');
-/*$routes->add('rh/offrup', 'offre::upd');
-=======
-$routes->add('rh/candidat', 'post::index');
-$routes->add('rh/rh/formulaire', 'formulaire::index');
-/*
->>>>>>> Stashed changes
 /*
  * --------------------------------------------------------------------
  * Additional Routing
