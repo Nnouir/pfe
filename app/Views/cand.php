@@ -37,11 +37,11 @@
          <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                    <h4 class="mb-0">Offre</h4>
+                    <h4 class="mb-0">candidat</h4>
                      <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?php echo base_url('rh/dachbourd')?>">Dashboard</a></li>
-                            <li class="breadcrumb-item active">offre</li>
+                            <li class="breadcrumb-item active">candidat</li>
                         </ol>
                     </div>
                  </div>
@@ -54,7 +54,7 @@
                  <div class="card">
                         <div class="card-body">
                           <!-- Left Sidebar End -->
-                            <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/off')?>">add</a></button>
+                            
                              <div class="rightbar-overlay"></div>
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
@@ -75,9 +75,7 @@
                                         <td> <?php echo $users['duree']; ?></td>
                                         <td> <?php echo $users['namertech']; ?> </td>
                                         <td> <?php echo $users['namerpsy']; ?> </td>
-                                        <td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/candidat/'.$users['id_offre'])?>">candidat</a></button> </td>
-                                        <td> <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/offreup/'.$users['id_offre'])?>">update</a></button> </td>
-                                        <td> <button type="button" class="btn btn-danger remove"> Delete</button>
+                                      
                                     </tr>
                                    <?php endforeach; ?>
                                    <?php endif; ?>
@@ -118,19 +116,7 @@
 <script src="<?php echo base_url('assets/js/pages/datatables.init.js')?>"></script>
 <script src="<?php echo base_url('assets/js/app.js')?>"></script> 
 
-<script type="text/javascript">
-        $(".remove").click(function(){ var id = $(this).parents("tr").attr("id");
-        if(confirm('Are you sure to remove this record ?'))
-        { $.ajax({
-               url: "<?php echo base_url('/rh/offre/').'/'?>"+id,
-               type: 'POST',
-               error: function() {alert('Something is wrong'); },
-               success: function(data) { $("#"+id).remove(); 
-                alert("Record removed successfully");  }
-                   });
-        }
-        });
-</script>
+
 <!--delete-->
 </body>
 </html>

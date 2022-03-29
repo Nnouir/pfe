@@ -46,7 +46,7 @@ $routes->add('rh/langue', 'lag::index');
 $routes->add('rh/offre', 'offre::index');
 $routes->add('rh/off', 'offre::add');
 $routes->add('rh/off', 'offre::niveau');
-
+$routes->add('rh/candidat/(:any)', 'candida::index/$1');
 $routes->add('rh/diplome', 'diplome::index');
 $routes->add('rh/diplome/(:any)', 'diplome::delete/$1');
 $routes->add('rh/diplomeget/(:any)', 'diplome::fer/$1');
