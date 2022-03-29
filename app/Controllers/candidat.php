@@ -8,7 +8,7 @@ class candidat extends BaseController
     {  $userModel = new \App\Models\OffreModel ();
       $id_offre= $this->request->getVar('id_offre');
      
-      $userModel = new \App\Models\candidatModel ();
+     $userModel = new \App\Models\candidatModel ();
       $id_offre= $this->request->getVar('id_offre');
       $data = [
      'nom'=>  $this->request->getvar('name'),
