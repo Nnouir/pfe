@@ -158,7 +158,9 @@
                 <div class="wrap-input100 validate-input bg1">
                     <div>Period of your professional experience</div>
                     <div class="label-input100"></div>
+
                 <input type="text" class="label-input100_lg"aria-label="Text input with checkbox" placeholder=" Period_of_Your_experience " name="experience"id="validationDefault0" required>  
+
                             </div>
                             </div>
                 <?php endforeach; ?>

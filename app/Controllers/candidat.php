@@ -22,6 +22,7 @@ class candidat extends BaseController
      'sexe'=>  $this->request->getVar('flexRadioDefault'),
      'id_offre'=>  $id_offre];
      $id_candidat = $userModel ->insert($data);
+
         
      
    
@@ -31,6 +32,10 @@ class candidat extends BaseController
                 
                  
                 $userModel = new \App\Models\languecandidatModel ();
+
+     var_dump($data);
+   $userModel = new \App\Models\languecandidatModel ();
+
                
                foreach($_POST["langue"]as $langue){
             
@@ -58,6 +63,7 @@ class candidat extends BaseController
                             
       
     } // enfd index
+
 
 
 
@@ -163,6 +169,10 @@ class candidat extends BaseController
     
         
     }//end score
+
+                      
+    }
+
    
 } //end class
 ?>
