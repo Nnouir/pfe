@@ -55,11 +55,12 @@ class envoye extends BaseController
                    $user = $userModel ->insert($array);
                    var_dump($array);
                     $sj= array(
+                    'id_offre'=>  $idoffre,
                     'sexe'=> 'F',
                     'points'=>  $this->request->getVar('f'));
                     $user = $userModel ->insert($sj);
                     var_dump( $user);
-                    return redirect()->to(site_url('rh/offre'));
+                   
 
       
        $userModel = new \App\Models\CompetenceModel  ();
@@ -88,9 +89,9 @@ class envoye extends BaseController
                var_dump($user);}
                
        
-             
+          
             
-               
+               return redirect()->to(site_url('rh/offre'));   
                        
                       
                      

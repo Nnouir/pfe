@@ -37,7 +37,7 @@
          <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                    <h4 class="mb-0">candidat</h4>
+                    <h4 class="mb-0">All the candidat</h4>
                      <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?php echo base_url('rh/dachbourd')?>">Dashboard</a></li>
@@ -49,6 +49,8 @@
         </div>
     </div>
          <!-- end page title -->
+<form method="post" action="<?php echo base_url('rh/numbrecandidat')?>" >
+<div>  <input type="hidden" id="id" name="id_offre" value='<?php echo $id_offre; ?>' ></div>
         <div class="row">
             <div class="col-12">
                  <div class="card">
@@ -56,31 +58,128 @@
                           <!-- Left Sidebar End -->
                             
                              <div class="rightbar-overlay"></div>
+               
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
+                                       
                                             <tr>
-                                                <th>id</th>
-                                                <th>title</th>
-                                                <th>date</th>
-                                                <th>technical Manager</th>
-                                                <th>Psychology Manager</th>
+                                          <th></th>
+                                                <th>nom</th>
+                                                <th>num_tel</th>
+                                                <th>email</th>
+                                                <th>score total</th>
+                                                
                                             </tr>
                                             </thead>
+                                            
                                  <tbody>
                                     <?php if($offre): ?>
-                                    <?php foreach($offre as $users ): ?>
+                                    <?php foreach($offre as $users ): ?>    
                                     <tr id="<?php echo $users['id_offre']; ?>"> 
-                                        <td> <?php echo $users['id_offre']; ?></td>
-                                        <td> <?php echo $users['titre']; ?></td>
-                                        <td> <?php echo $users['duree']; ?></td>
-                                        <td> <?php echo $users['namertech']; ?> </td>
-                                        <td> <?php echo $users['namerpsy']; ?> </td>
-                                      
+                                  
+                                   
+						  
+						 
+                                    <td><input type="checkbox" value='<?php echo $users['id'];?>' name='testtech[]'></td>
+                                        <td> <?php echo $users['nom']; ?></td>
+                                        <td> <?php echo $users['num_tel']; ?></td>
+                                        <td> <?php echo $users['email']; ?></td>
+                                        <td><?php echo $users['scoretotal']; ?> </td>
+                                        <td> <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/profil/'.$users['id'])?>">profil</a></button> </td>
+                                        <span class="checkmark"></span>
+						 
+                              </label> 
                                     </tr>
                                    <?php endforeach; ?>
                                    <?php endif; ?>
                                  </tbody>
                                 </table>
+                                
+                                <button class="contact100-form-btn" name='submit'>
+						<span>
+                        passes the technical test
+						
+						</span>
+					</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+</form>
+</div>
+</div>
+<div class="main-content">
+ <div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+         <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0"> candidate who passes the technical test</h4>
+                     
+                 </div>
+            </div>
+        </div>
+    </div>
+         <!-- end page title -->
+         <form method="post" action="<?php echo base_url('rh/numbrecandidattest/')?>" >
+<div>  <input type="hidden" id="id" name="id_offre" value='<?php echo $id_offre; ?>' ></div>
+        <div class="row">
+            <div class="col-12">
+                 <div class="card">
+                        <div class="card-body">
+                          <!-- Left Sidebar End -->
+                            
+                             <div class="rightbar-overlay"></div>
+                            
+                                <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                       
+                                            <tr>
+                                          <th></th>
+                                                <th>nom</th>
+                                                <th>num_tel</th>
+                                                <th>email</th>
+                                                <th>score total</th>
+                                                
+                                            </tr>
+                                            </thead>
+                                            
+                                            <tbody>
+                                    <?php if($userstsch): ?>
+                                    <?php foreach($userstsch as $userstsch ): ?>    
+                                    <tr id="<?php echo $userstsch['id_offre']; ?>"> 
+                                    
+                                   
+						  
+						 
+                                    <td><input type="checkbox" value='<?php echo $userstsch['id'];?>' name='testpsy[]'></td>
+                                        <td> <?php echo $userstsch['nom']; ?></td>
+                                        <td> <?php echo $userstsch['num_tel']; ?></td>
+                                        <td> <?php echo $userstsch['email']; ?></td>
+                                        <td><?php echo $userstsch['scoretotal']; ?> </td>
+                                        <td> <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/profil/'.$userstsch['id'])?>">profil</a></button> </td>
+                                        <span class="checkmark"></span>
+						 
+                              </label> 
+                                    </tr>
+                                   <?php endforeach; ?>
+                                   <?php endif; ?>
+                                 </tbody>
+                                </table>
+                                <button class="contact100-form-btn" name='submit'>
+                                    submit
+                                </button>
+                        <select name='action'>
+                        <option value='remove'>   remouve
+                                    </option >
+                        <option value='test'>   passes the psychological test
+                                    </option > 
+                                   
+                                    </select>
+					
+                     
                             </div>
                         </div>
                 </div>
@@ -88,6 +187,79 @@
         </div>
 </div>
 </div>
+</form >
+<div class="main-content">
+ <div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+         <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0"> candidate who passes the psychological test</h4>
+                     
+                 </div>
+            </div>
+        </div>
+    </div>
+         <!-- end page title -->
+         <form method="post" action="<?php echo base_url('rh/numbrecandidattestpsy/')?>" >
+         <div>  <input type="hidden" id="id" name="id_offre" value='<?php echo $id_offre; ?>' ></div>
+         <div class="row">
+            <div class="col-12">
+                 <div class="card">
+                        <div class="card-body">
+                          <!-- Left Sidebar End -->
+                            
+                             <div class="rightbar-overlay"></div>
+                            
+                                <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                       
+                                            <tr>
+                                          <th></th>
+                                                <th>nom</th>
+                                                <th>num_tel</th>
+                                                <th>email</th>
+                                                <th>score total</th>
+                                                
+                                                </tr>
+                                            </thead>
+                                            
+                                            <tbody>
+                                    <?php if($userspsy): ?>
+                                    <?php foreach($userspsy as $userspsy ): ?>    
+                                    <tr id="<?php echo $userspsy['id_offre']; ?>"> 
+                              
+						  
+						 
+                                    <td><input type="checkbox" value='<?php echo $userspsy['id'];?>' name='valide[]'></td>
+                                        <td> <?php echo $userspsy['nom']; ?></td>
+                                        <td> <?php echo $userspsy['num_tel']; ?></td>
+                                        <td> <?php echo $userspsy['email']; ?></td>
+                                        <td><?php echo $userspsy['scoretotal']; ?> </td>
+                                        <td> <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rh/profil/'.$userspsy['id'])?>">profil</a></button> </td>
+                                        <span class="checkmark"></span>
+						 
+                              </label> 
+                                    </tr>
+                                   <?php endforeach; ?>
+                                   <?php endif; ?>
+                                 </tbody>
+                                </table>
+                                <button class="contact100-form-btn" name='submit'>
+						<span>
+                        Remove
+						
+						</span>
+					</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+ </form>
 <!-- JAVASCRIPT -->
 
 <script src="<?php echo base_url('assets/libs/jquery/jquery.min.js')?>"></script>
