@@ -6,12 +6,12 @@ use CodeIgniter\Model;
 class candidatModel extends Model
 {
     protected $table      = 'candidat';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_candidat';
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
    // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nom','age','adresse','num_tel','linkedin','id_offre'];
+    protected $allowedFields = ['nom','age','adresse','num_tel','linkedin','id_offre','niveau','sexe','specialite'];
 }
 ?>

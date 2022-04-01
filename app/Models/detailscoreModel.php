@@ -3,7 +3,7 @@ namespace App\Models;
 use CodeIgniter\Database\ConnectionInterface;
 use CodeIgniter\Model;
 
-class candidatModel extends Model
+class detailscoreModel extends Model
 {
     protected $table      = 'detailscore';
     protected $primaryKey = 'id';
@@ -12,6 +12,6 @@ class candidatModel extends Model
     protected $returnType     = 'array';
    // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['page','plangue','psexe','petude','pcompetence','id_offre','id candidat'];
+    protected $allowedFields = ['page','plangue','psexe','petude','pcompetence','id_offre','id_candidat','scoretotal'];
 }
 ?>
