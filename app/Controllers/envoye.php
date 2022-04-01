@@ -55,7 +55,9 @@ class envoye extends BaseController
                    $user = $userModel ->insert($array);
                    var_dump($array);
                     $sj= array(
-                    'id_offre'=>  $idoffre,
+
+                      'id_offre'=>  $idoffre,
+
                     'sexe'=> 'F',
                     'points'=>  $this->request->getVar('f'));
                     $user = $userModel ->insert($sj);
@@ -88,10 +90,12 @@ class envoye extends BaseController
                $user = $userModel ->insert($aj);
                var_dump($user);}
                
-       
-          
+
+               return redirect()->to(site_url('rh/offre'));
+             
+
             
-               return redirect()->to(site_url('rh/offre'));   
+                
                        
                       
                      

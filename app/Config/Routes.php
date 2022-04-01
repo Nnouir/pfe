@@ -72,7 +72,7 @@ $routes->add('rh/formulaire', 'formulaire::index');
 $routes->add('rh/form','candidat::index');
 $routes->add('rh/candidat','post::index');
 $routes->add('rh/rh/formulaire', 'formulaire::index');
-
+$routes->add('rh/score/(:any)','candidat::score/$1');
 
 
 

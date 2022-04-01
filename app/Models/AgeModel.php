@@ -12,7 +12,7 @@ class AgeModel extends Model
     protected $returnType     = 'array';
    // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['id_offre','min','max','points'];
+    protected $allowedFields = ['id_offre','min','max','point'];
    
    
 }

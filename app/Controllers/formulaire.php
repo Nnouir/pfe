@@ -42,6 +42,7 @@ class formulaire extends BaseController
                             
                              $data['id_offre']=$id; 
                              
+                            
                           return view('formulaire',$data);
                              
      

@@ -47,30 +47,29 @@
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Please Type Your Name">
 					<span class="label-input100">FULL NAME *</span>
-					<input class="input100" type="text" name="name" placeholder="Enter Your Name"id="validationDefault01" required>
-                   
-                </div>
+					<input class="input100" type="text" name="name" placeholder="Enter Your Name">
+				</div>
 				
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Age *</span>
-					<input class="input100" type="text" name="age" placeholder="Enter your age"id="validationDefault02" required>
+					<input class="input100" type="text" name="age" placeholder="Enter your age">
 				</div>
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
 					<span class="label-input100">Adress *</span>
-					<input class="input100" type="text" name="adresse" placeholder="Enter Your Adress " id="validationDefault03" required>
+					<input class="input100" type="text" name="adresse" placeholder="Enter Your Adress ">
 				</div>
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
 					<span class="label-input100">Email *</span>
-					<input class="input100" type="text" name="email" placeholder="Enter Your Email " id="validationDefault04" required>
+					<input class="input100" type="text" name="email" placeholder="Enter Your Email ">
 				</div>
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
 					<span class="label-input100">Linkedln *</span>
-					<input class="input100" type="text" name="linkedln" placeholder="Enter Your Linkedln "id="validationDefault05" required>
+					<input class="input100" type="text" name="linkedln" placeholder="Enter Your Linkedln ">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Phone</span>
-					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone"id="validationDefault06" required>
+					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
@@ -96,7 +95,7 @@
 				
                 <div class="wrap-input100 bg1 rs1-wrap-input100" data-validate="Please Type Your Name">
 					<span class="label-input100">speciality</span>
-					<input class="input100" type="text" name="specialite" placeholder="Enter Your speciality"id="validationDefault07" required>
+					<input class="input100" type="text" name="specialite" placeholder="Enter Your speciality">
 				</div>
 				<div class="col-md-4">
 						<div class="heading-title mb-4">
@@ -127,7 +126,7 @@
  <th id="<?php echo $user['id_offre']; ?>"> 
            
 						<label class="checkbox-wrap">  <?php echo $user['namelang']; ?>
-						  <input type="checkbox"  value='<?php echo $user['id_langue'];?>' name='langue[]'>
+						  <input type="checkbox" checked="checked" value='<?php echo $user['id_langue'];?>' name='langue[]'>
 						  <span class="checkmark"></span>
 						</label> 
           
@@ -158,9 +157,7 @@
                 <div class="wrap-input100 validate-input bg1">
                     <div>Period of your professional experience</div>
                     <div class="label-input100"></div>
-
-                <input type="text" class="label-input100_lg"aria-label="Text input with checkbox" placeholder=" Period_of_Your_experience " name="experience"id="validationDefault0" required>  
-
+                <input type="text" class="label-input100_lg"aria-label="Text input with checkbox" placeholder=" Period_of_Your_experience " name="experience">  
                             </div>
                             </div>
                 <?php endforeach; ?>
@@ -219,24 +216,7 @@
 <!--===============================================================================================-->
 	<script src=<?php echo base_url("ContactFrom_v5/vendor/noui/nouislider.min.js")?>></script>
 	<script>
-	   /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli
-            *et d'appliquer les styles de validation aux différents éléments de formulaire*/
-            (function() {
-             'use strict';
-             window.addEventListener('load', function() {
-               let forms = document.getElementsByClassName('needs-validation');
-               let validation = Array.prototype.filter.call(forms, function(form) {
-                 form.addEventListener('submit', function(event) {
-                   if (form.checkValidity() === false) {
-                     event.preventDefault();
-                     event.stopPropagation();
-                   }
-                   form.classList.add('was-validated');
-                 }, false);
-               });
-             }, false);
-           })();
-         </script>
+	 
 	</script>
 <!--===============================================================================================-->
 	<script src=<?php echo base_url("js/main.js")?>></script>
