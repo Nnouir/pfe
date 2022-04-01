@@ -12,6 +12,6 @@ class candidatModel extends Model
     protected $returnType     = 'array';
    // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nom','age','adresse','num_tel','linkedin','id_offre'];
+    protected $allowedFields = ['nom','age','adresse','num_tel','linkedin','id_offre','adresse','email','niveau','sexe','specialite','passetesttech','passetestpsy'];
 }
 ?>
