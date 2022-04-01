@@ -54,19 +54,18 @@
        <?php echo view('header');?>
        <?php echo view('menupsy');?>    <!-- Sidebar -->
        </div>
-
- <div class="main-content">
+       <div class="main-content">
  <div class="page-content">
     <div class="container-fluid">
         <!-- start page title -->
          <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                    <h4 class="mb-0">Offre</h4>
+                    <h4 class="mb-0">All the candidat</h4>
                      <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="<?php echo base_url('rhpsy/dachbourd')?>">Dashboard</a></li>
-                            <li class="breadcrumb-item active">offre</li>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url('rh/dachbourd')?>">Dashboard</a></li>
+                            <li class="breadcrumb-item active">candidat</li>
                         </ol>
                     </div>
                  </div>
@@ -74,6 +73,7 @@
         </div>
     </div>
          <!-- end page title -->
+
         <div class="row">
             <div class="col-12">
                  <div class="card">
@@ -99,6 +99,7 @@
                                         <td> <?php echo $users['titre']; ?></td>
                                         <td> <?php echo $users['duree']; ?></td>
                                         <td> <button type="button" class="btn btn-primary waves-effect waves-light edit" data-bs-toggle="modal" data-bs-target="#idModal">update</button></td>
+                                        <td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal"><a href="<?php echo base_url('rhpsy/candidattestpsy/'.$users['id_offre'])?>">candidat</a></button> </td>
                                       
                                     
                                         

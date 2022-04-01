@@ -39,10 +39,27 @@ class ofrpsy extends BaseController
             $userModel = new \App\Models\testpsy ();
            $fa= $userModel->where('id_offre',$id)->first();
            echo $fa['test'];;
-          }
+          }//end fer
               
-
-
+          public function candidapsy($id) {
+            $userModel = new \App\Models\candidatModel();
+            $candModel = new \App\Models\resultattestpsyModel(); 
+            $cand = $userModel-> select('candidat.*')
+            ->where('passetesttech','oui')->where('passetestpsy','oui')->where('candidat.id_offre',$id)->find();
+            foreach($cand as  $pdip){
+               $fa= $candModel->where('id_candidat',$pdip['id'])->first();
+            
+            if(!empty($fa)){ $userspsy[] =array_merge($pdip,$fa); }
+            else{ $userspsy[] =$pdip;}
+               
+              
+                 
+            } 
+            $data = ['userspsy' => $userspsy,'id_offre'=>$id,'ajout'=>$erros ?? null];
+            return view('candpsy',$data);
+         }//end candidapsy
+         
+         
 
         
 }// end class

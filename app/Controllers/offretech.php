@@ -35,15 +35,38 @@ $userModel = new \App\Models\OffreModel();
          $idoffre = $userModel ->insert($rj);}
             else{$idoffre = $userModel ->update($fa['id'],$rj);}          
      return view('offtech',$data);
-   }
+   }//end index
 
    public function fer($id) {
       $userModel = new \App\Models\testtech ();
      $fa= $userModel->where('id_offre',$id)->first();
      echo $fa['test'];;
-  }
+  }//end fer
 
+  public function candidtest($id)
+  {$userModel = new \App\Models\candidatModel();
+ 
+   $candModel = new \App\Models\resultattesttechModel();
+      
+   $cand = $userModel-> select('candidat.*')
+  ->where('passetesttech','oui')->where('passetestpsy','non')->where('candidat.id_offre',$id)->find();
+
+  foreach($cand as  $pdip){
+   $fa= $candModel->where('id_candidat',$pdip['id'])->first();
+
+if(!empty($fa)){
+  $userstsch[] =array_merge($pdip,$fa);
+
+
+}
+else{ $userstsch[] =$pdip;}
+   
+  
      
+} 
+  $data = ['userstsch' => $userstsch,'id_offre'=>$id,'ajout'=>$erros ?? null];
+   return view('candtech',$data);
+  }//end candidtest
 
 
 

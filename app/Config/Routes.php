@@ -62,9 +62,11 @@ $routes->add('rh/offre/(:any)', 'offre::delete/$1');
 $routes->get('rhtech/dachbourd', 'retchdashbord::index');
 $routes->add('rhtech/offre', 'offretech::index');
 $routes->add('rhtech/offreget/(:any)', 'offretech::fer/$1');
+$routes->add('rhtech/candidattesttech/(:any)', 'offretech::candidtest/$1');
 $routes->get('rhpsy/dachbourd','rpsychdashbord::index');
 $routes->add('rhpsy/of', 'ofrpsy::index');
 $routes->add('rhpsy/offreget/(:any)', 'ofrpsy::fer/$1');
+$routes->add('rhpsy/candidattestpsy/(:any)', 'ofrpsy::candidapsy/$1');
 $routes->add('rh/candidat', 'post::index');
 
 $routes->add('rh/formulaireget/(:any)','formulaire::index/$1');
