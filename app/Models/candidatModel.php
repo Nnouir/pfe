@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class candidatModel extends Model
 {
     protected $table      = 'candidat';
-    protected $primaryKey = 'id_candidat';
+    protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
