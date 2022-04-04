@@ -41,7 +41,7 @@ class candidat extends BaseController
             
                  $ddb = array(
                     
-                  'id_candidat'=> $id_candidat,
+                  'id'=> $id_candidat,
                   'id_langue'=>  $langue);
                 
                  $user = $userModel ->insert($ddb);  
@@ -53,7 +53,7 @@ class candidat extends BaseController
                        
                             $ddb = array(
                                
-                             'id_candidat'=> $id_candidat,
+                             'id'=> $id_candidat,
                              'id_competence'=>  $competence,
                              'experience'=> $this->request->getVar('experience'));
                             $user = $userModel ->insert($ddb);     
@@ -115,7 +115,7 @@ class candidat extends BaseController
                            
                      $userModel = new \App\Models\languecandidatModel ();
        
-        $langcand=  $userModel->where('id_candidat',$data['id_candidat'])->find();
+        $langcand=  $userModel->where('id_candidat',$data['id'])->find();
         $plangueModel = new \App\Models\PlangueModel ();
        
       $tot_point_langue=0;
@@ -162,7 +162,7 @@ class candidat extends BaseController
         'petude' =>  $petude['points'] ,
         'pcompetence' => $tot_point_co,
         'id_offre'=>  $data['id_offre'],
-        'id_candidat'=> $id_candidat,
+        'id'=> $id_candidat,
         'scoretotal'=> $tot_point_age+$tot_point_langue+ $tot_point_sexe+$petude['points'] +$tot_point_co
         ];
      $id  = $userModel ->insert($array);
